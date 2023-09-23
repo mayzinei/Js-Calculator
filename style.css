@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+.container {
+	height: 100vh;
+	background: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+}
+.calculator {
+	background: lightcyan;
+	border-radius: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	padding: 25px;
+}
+input {
+	border: none;
+	outline: none;
+	width: 60px;
+	height: 60px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 10px;
+	background: lightblue;
+	color: rgb(113, 113, 156);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	cursor: pointer;
+}
+.buttons input:last-child {
+	grid-column: span 2;
+	width: 100%;
+	background: lightgreen;
+}
+.buttons input:nth-child(1),
+.buttons input:nth-child(2) {
+	background: lightsalmon;
+}
+.buttons input:nth-child(3),
+.buttons input:nth-child(4),
+.buttons input:nth-child(8),
+.buttons input:nth-child(12),
+.buttons input:nth-child(16) {
+	background: lightpink;
+}
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-top: 20px;
+}
+.display {
+	display: flex;
+}
+.text-input {
+	flex: 1;
+	text-align: right;
+	padding: 0 10px;
+	font-size: 32px;
+	border-radius: 2px;
+	background: lightslategray;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	color: #ddd;
+}
+.text-input::placeholder {
+	color: #ddd;
+}
